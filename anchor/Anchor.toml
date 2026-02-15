@@ -4,15 +4,15 @@
 resolution = true
 skip-lint = false
 
-[programs.devnet]
+[programs.localnet]
 vault = "D8veRtUCxu9uVSi3pMGS363cRv4WDEysfcZoGSaKQgQs"
 
 [registry]
 url = "https://api.apr.dev"
 
 [provider]
-cluster = "devnet"
+cluster = "localnet"
 wallet = "~/.config/solana/id.json"
 
 [scripts]
-test = "cargo test"
+test = "cd .. && npx vitest run anchor/tests"
