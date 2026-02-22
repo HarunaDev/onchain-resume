@@ -1,5 +1,5 @@
 [package]
-name = "vault"
+name = "profile"
 version = "0.1.0"
 description = "A simple resume profile program"
 edition = "2021"

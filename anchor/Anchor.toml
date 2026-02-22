@@ -5,7 +5,7 @@ resolution = true
 skip-lint = false
 
 [programs.localnet]
-vault = "D8veRtUCxu9uVSi3pMGS363cRv4WDEysfcZoGSaKQgQs"
+profile = "D8veRtUCxu9uVSi3pMGS363cRv4WDEysfcZoGSaKQgQs"
 
 [registry]
 url = "https://api.apr.dev"
@@ -16,3 +16,6 @@ wallet = "~/.config/solana/id.json"
 
 [scripts]
 test = "cd .. && npx vitest run anchor/tests"
+
+[test]
+startup_wait = 10000

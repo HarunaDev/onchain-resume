@@ -4,6 +4,6 @@ export default defineConfig({
   test: {
     environment: "node",
     globals: true,
-    testTimeout: 30000,
+    testTimeout: 50000,
   },
 });
