@@ -143,11 +143,11 @@ describe("profile program", () => {
   it("can update existing profile", () => {
     // First create profile
     const createData = program.coder.instruction.encode("setProfile", {
-      fullName: "Old Name",
-      bio: "Old bio",
-      yearsOfExperience: new BN(1),
-      portfolio: "old.com",
-      skills: ["OldSkill"],
+      fullName: "Haruna Alvin",
+      bio: "Solana dev from Lagos building dApps",
+      yearsOfExperience: new BN(6),
+      portfolio: "harunadv.netlify.app",
+      skills: ["Rust", "Anchor", "Next.js", "Solana"],
     });
 
     const createIx = new TransactionInstruction({
@@ -183,11 +183,11 @@ describe("profile program", () => {
 
     // Now update
     const updateData = program.coder.instruction.encode("setProfile", {
-      fullName: "Haruna Alvin Updated",
-      bio: "Updated bio",
-      yearsOfExperience: new BN(5),
-      portfolio: "new.dev",
-      skills: ["Anchor", "Rust"],
+      fullName: "Haruna Alvin Ojonimi",
+      bio: "Call of duty gamer",
+      yearsOfExperience: new BN(15),
+      portfolio: "codm",
+      skills: ["Reload", "Drone strike user", "ak-117 expert"],
     });
 
     const updateIx = new TransactionInstruction({
@@ -225,8 +225,8 @@ describe("profile program", () => {
       Buffer.from(accountInfo.data)
     );
 
-    expect(profile.fullName).toBe("Haruna Alvin Updated");
-    expect(profile.yearsOfExperience.toString()).toBe("5");
-    expect(profile.skills).toEqual(["Anchor", "Rust"]);
+    expect(profile.fullName).toBe("Haruna Alvin Ojonimi");
+    expect(profile.yearsOfExperience.toString()).toBe("15");
+    expect(profile.skills).toEqual(["Reload", "Drone strike user", "ak-117 expert"]);
   });
 });
