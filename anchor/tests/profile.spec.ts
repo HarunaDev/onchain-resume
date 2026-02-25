@@ -50,8 +50,8 @@ describe("profile program", () => {
   it("can create / set a profile (init_if_needed)", () => {
     const fullName = "Haruna Alvin";
     const bio = "Solana dev from Lagos building dApps";
-    const yearsOfExperience = new BN(4);
-    const portfolio = "https://haruna.dev";
+    const yearsOfExperience = new BN(6);
+    const portfolio = "https://harunadev.netlify.app";
     const skills = ["Rust", "Anchor", "Next.js", "Solana"];
 
     // Debug info
@@ -59,10 +59,10 @@ describe("profile program", () => {
     // console.log("Profile PDA:", profilePda.toString());
 
     // Verify PDA derivation
-    const [expectedPda] = PublicKey.findProgramAddressSync(
-      [Buffer.from("profile"), user.publicKey.toBuffer()],
-      programId
-    );
+    // const [expectedPda] = PublicKey.findProgramAddressSync(
+    //   [Buffer.from("profile"), user.publicKey.toBuffer()],
+    //   programId
+    // );
     // console.log(
     //   "PDA derivation correct:",
     //   expectedPda.toString() === profilePda.toString()
@@ -135,7 +135,7 @@ describe("profile program", () => {
 
     expect(profile.fullName).toBe(fullName);
     expect(profile.bio).toBe(bio);
-    expect(profile.yearsOfExperience.toString()).toBe("4");
+    expect(profile.yearsOfExperience.toString()).toBe("6");
     expect(profile.portfolio).toBe(portfolio);
     expect(profile.skills).toEqual(skills);
   });
