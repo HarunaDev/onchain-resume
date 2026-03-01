@@ -47,7 +47,7 @@ describe("profile program", () => {
     program = new Program(profileIdl, programId);
   });
 
-  it("can create / set a profile (init_if_needed)", () => {
+  it("can create / set a profile", () => {
     const fullName = "Haruna Alvin";
     const bio = "Solana dev from Lagos building dApps";
     const yearsOfExperience = new BN(6);
